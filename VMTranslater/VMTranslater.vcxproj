@@ -128,7 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CommandWriter.cpp" />
+    <ClCompile Include="LineWriter.cpp" />
     <ClCompile Include="Nand2Tetris-VMTranslater.cpp" />
     <ClCompile Include="VMTranslator.cpp" />
   </ItemGroup>

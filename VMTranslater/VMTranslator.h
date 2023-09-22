@@ -5,13 +5,13 @@
 #include <string>
 #include <vector>
 #include <sstream>
-#include "CommandWriter.cpp"
+#include "LineWriter.cpp"
 
 using namespace std;
 
 class VMTranslator {
 public:
-    VMTranslator(std::ifstream& input, std::ofstream& output) : inputFile(input), commandWriter(output) {}
+    VMTranslator(std::ifstream& input, std::ofstream& output) : inputFile(input), lineWriter(output) {}
 
     void translateVMCommand() {
         string line;
@@ -27,11 +27,11 @@ public:
                 string command = tokens[0];
 
                 if (command == "push" || command == "pop")
-                    commandWriter.writeMemoryAccess(tokens);
+                    lineWriter.writeMemoryAccess(tokens);
                 else if (command == "add" || command == "sub" || command == "neg" ||
                          command == "eq"  || command == "gt"  || command == "lt" ||
                          command == "and" || command == "or"  || command == "not")
-                    commandWriter.writeArithmetic(tokens);
+                    lineWriter.writeArithmetic(tokens);
                 else
                     continue;
             }
@@ -41,7 +41,7 @@ public:
 
 private:
     ifstream& inputFile;
-    CommandWriter commandWriter;
+    LineWriter lineWriter;
 
     vector<string> tokenize(const string& line)
     {
