@@ -18,6 +18,12 @@
     <ClCompile Include="Nand2Tetris-VMTranslater.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="VMTranslator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandWriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VMTranslator.h">
