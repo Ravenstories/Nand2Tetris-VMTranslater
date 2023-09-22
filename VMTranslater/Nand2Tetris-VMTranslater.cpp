@@ -19,6 +19,9 @@ int main()
     inputFile.clear();
     inputFile.seekg(0);
 
+    inputFile.close();
+    outputFile.close();
+
     std::cout << "Assembly successfully assembled to " << outputFileName << endl;
 
     return 0;

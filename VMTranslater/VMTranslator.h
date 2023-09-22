@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 #include <sstream>
-#include "commandWriter.cpp"
+#include "CommandWriter.cpp"
 
 using namespace std;
 
@@ -32,20 +32,6 @@ public:
                          command == "eq"  || command == "gt"  || command == "lt" ||
                          command == "and" || command == "or"  || command == "not")
                     commandWriter.writeArithmetic(tokens);
-                /*
-                else if (command == "label")
-                    writeLabel(tokens[1]);
-                else if (command == "goto")
-                    writeGoto(tokens[1]);
-                else if (command == "if-goto")
-                    writeIf(tokens[1]);
-                else if (command == "function")
-                    writeFunction(tokens[1], tokens[2]);
-                else if (command == "return")
-                    writeReturn();
-                else if (command == "call")
-                    writeCall(tokens[1], tokens[2]);
-                */
                 else
                     continue;
             }
